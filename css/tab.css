@@ -1,0 +1,34 @@
+div {
+	position: relative;
+	float: left;
+	width: 100px;
+}
+
+.az:active:after, .az:focus:after, .az:hover:after  {
+	content: "AZ";
+	margin:0;
+	padding:0;
+	width: 100px;
+	height: 200px;
+	padding-top: 10px;
+}
+
+.en:active:after, .en:focus:after, .en:hover:after {
+	content: "EN";
+	margin:0;
+	padding:0;
+	width: 100px;
+	height: 200px;
+	padding-top: 10px;
+	margin-left: -200px;
+}
+
+.rus:active:after, .rus:focus:after, .rus:hover:after {
+	content: "RUS";
+	margin:0;
+	padding:0;
+	width: 100px;
+	height: 200px;
+	padding-top: 10px;
+	margin-left: -400px;
+}

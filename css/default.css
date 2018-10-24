@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	float:none;
+	text-align: center;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	border-radius: 0;
+}
+html, body {
+	width:100%;
+	height:100%;
+}

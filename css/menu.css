@@ -1,0 +1,64 @@
+#parent {
+	position: relative;
+	float: left;
+	width: 100%;
+	border-top: 3px grey solid;
+	height: 30px;
+}
+
+ul > li {
+	position: relative;
+	float: left;
+	width: calc( 100% / 8);
+}
+
+ul li ul {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+ul li ul li {
+	position: relative;
+	float: left;
+	width: 100%;
+	opacity: 0;
+	transition: .2s;
+}
+
+ul li:hover ul li {
+	opacity: 1;
+}
+
+h2 {
+	position: relative;
+	text-align: center;
+}
+
+h2:hover, h2:focus, h2:active {
+  cursor: pointer;
+}
+h2:hover:after, h2:focus:after, h2:active:after {
+  width: 50%;
+}
+h2:after {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -1px;
+  height: 2px;
+  background-color: grey;
+  width: 0;
+  transition: width 0.4s;
+}
+
+ul li ul li:hover p{
+	transform: translateX(3px);
+}
+
+p:hover:before{
+	content: url(images/right.png);
+	position: relative;
+	text-align: center;
+	top: 3px;
+}

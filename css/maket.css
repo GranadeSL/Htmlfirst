@@ -1,0 +1,174 @@
+.body {
+
+	background-image: url(images/large.jpg);
+}
+
+.header {
+	width: 100%;
+	height: 130px;	
+	margin-top: 20px;
+	margin-left: 5%;
+	position: fixed;
+	display: block;
+	top: 0px;
+}
+
+.a, .b, .c {
+	float: left;
+}
+.a {	
+		width: 10%;	
+}
+
+.b {
+		padding-left: 100px;
+		width: 60%;
+}
+
+.c {
+		width: 20%;
+}
+ul { 
+	display: block;
+	position: relative;
+	float: left;
+ }
+
+li {
+	float: left;
+	padding-left: 10px;
+	font-size: 30px;
+	margin-left: 10px;
+	margin-top: 20px;
+
+	text-decoration-line: underline;
+
+}
+
+table {
+	float: right;
+	padding-top: 25px;
+}
+td {
+	text-align: center;
+	width: 20px;
+	font-size: 18px;
+	border-right: 1px solid black;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-decoration-line: underline;
+
+	}
+
+td.exp {
+	border: none;
+}
+
+a {
+	color: black;
+}
+
+ul li ul { 
+	position: absolute;
+    width: 10%;
+    visibility: hidden;
+    display: block;
+
+
+ }
+
+ul li ul li {
+
+   	border-bottom: 1px black solid;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0;
+    margin: 3px;
+
+}
+
+ul li:hover ul {
+	background: grey;
+	visibility: visible;
+}
+
+/*------------------------------------------*/
+.body {
+	margin-top: 150px;
+	width: 100%;
+	height: 200px;
+
+	position: relative;
+}
+/*------------------------------------------*/
+.footer {
+	width: 100%;
+	height: 200px;
+
+	position: relative;
+	float:left;
+	background-color: grey;
+	display: block;
+}
+
+.a2, .b2 , .c2 { 
+	position: relative;
+	float:left;
+	height: 200px;
+ }
+.a2 {
+	padding-top: 40px;
+	width: 20%;
+
+}
+
+.b2 {
+	padding: 30px;
+	padding-top: 100px;
+ 	width: 40%;
+
+
+}
+
+.c2 {
+	width: 30%;
+	margin-top: 30px;
+}
+
+
+.contact, .firstcol, .secondcol {
+	position: relative;
+	float: left;
+
+}
+
+.contact {
+	height: 20%;
+	width: 100%;
+	padding-top: 10px;
+}
+.firstcol {
+	width: 50%;
+	height: 60%;
+	display: block;
+	line-height: 40px;
+}
+
+input {
+	height: 30px;
+	background-color: red;
+
+}
+
+.col {
+	height: 98px;
+}
+
+button {
+	width: 40%;
+}
+.secondcol {
+	padding-top: 2px;
+	height: 60%;
+	width: 50%;
+}

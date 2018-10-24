@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    color: green;
+}
+
+body, html {
+    width, height: 100%;
+}
+
+body {
+    background-image: url(images/large.jpg);
+}
+
+.a, .b {
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+    padding: 2px;
+    z-index: 1000;
+}
+
+.a {
+    width: 10%;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.b {
+    width: 90%;
+}
+
+ul li {
+
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 2px;
+    display: block;
+}
+
+ul li ul {
+    position: absolute;
+    display: none;
+    transition: 0.5s;
+}
+
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul li {
+    margin:0;
+    width: 90px;
+    height: 20px;
+    background-color: red;
+    border-bottom: 1px yellow dashed;
+
+} 
+
+.images {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: block;
+    top: 10px;
+    margin-left: 1px;
+    margin-bottom: 20px;
+}
+
+.img {
+    border: 1px black solid;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.img:hover {
+    position: relative;
+    transform: scale(1.5);
+    z-index: 1000;
+    }
+
+/*----------------------------------------------------*/
+.body {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left:37%;
+    position: relative;
+    float: left;
+}
+
+.body::before {
+    content: url(images/spider.png);
+}
+.body::after {
+    content: url(images/bat.png);
+}
+.body:hover {
+    position: relative;
+    transform: scale(1.1);
+}
+/*----------------------------------------------------*/
+
+.footer {
+    position: relative;
+    float: left;
+    background-color: grey;
+    width: 100%;
+    height: 30%;
+    top: 1px;
+}
+
+.f1, .f2, .f3 {
+    position: relative;
+    float: left;
+    
+    height: 100%;
+    border: 1px blue solid;
+    display: block;
+}
+
+.f1 { 
+    width: 95px;
+    height: 95px;
+    border: 6px red solid;
+    border-radius: 50%;
+    border-top-color: green;
+    position: relative;
+    float:left;
+    transition: border-color 1s, transform 1s linear;
+}
+p {
+    text-align: center;
+    padding-top: 35%;
+    
+}
+
+.f1:hover {
+    border-color: green;
+    border-top-color: red;
+    transform: rotate(360deg);
+}
+.f2 { 
+    padding-top: 2px;
+    width: 30%;
+ }
+
+.f3 {
+    width:50%;
+}
+/*--------------------------------------*/
+
+/*--------------------------------------*/
+.f2 {
+    display: block;
+
+   /* transform: translate(-50%, -50%);*/
+}
+
+/*--------------------------------------*/
+.headcol {
+    text-align: center;
+    margin-bottom: 1%;
+    height: 10%;
+}
+
+
+.firstcol, .secondcol {
+    position: relative;
+    float: left;
+    display: block;
+    margin: 0;
+    height: 89%;
+
+}
+
+.firstcol {
+    width: 40%;
+    margin-left: 15px;
+}
+
+.firstinp {
+    width: 100%;
+    height: calc( 86% / 4 );
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.secondcol {
+    width: 50%;
+    float: right;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.comment{
+    width: 100%;
+    height: 80%;
+}
+
+.comment:valid {
+    border:2px solid green;
+}
+
+.comment:invalid {    
+    border:2px solid red;
+}
+
+.comment:focus {
+    border:2px solid blue;
+}
+
+
+button {
+    background-color: blue;
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+.button:active {
+    box-shadow: 0 0 20px green;
+}
+
+.firstinp:valid {
+    border:2px solid green;
+}
+
+.firstinp:invalid {
+    border:2px solid red;
+}
+
+.firstinp:focus {
+    border:2px solid blue;
+}
