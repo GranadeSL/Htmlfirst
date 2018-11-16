@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loop</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = 5;
+		looper(a);
+		function looper(value) {
+			if ( value >= 0) {
+			console.log(value);
+			value--;
+			looper(value);
+			}
+		}
+	</script>
+</body>
+</html>

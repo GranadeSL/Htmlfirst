@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Digital dream';
+    src: url('Digitaldream.eot');
+    src: url('Digitaldream.eot?#iefix') format('embedded-opentype'),
+        url('Digitaldream.woff2') format('woff2'),
+        url('Digitaldream.woff') format('woff'),
+        url('Digitaldream.ttf') format('truetype'),
+        url('Digitaldream.svg#Digitaldream') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

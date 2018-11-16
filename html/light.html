@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Light</title>
+	<link rel="stylesheet" type="text/css" href="../css/light.css">
+</head>
+<body>
+	<div id="light">
+	<img src="../images/lightoff.png" alt="off" class="off">
+	<img src="../images/lighton.png" alt="on" class="on">
+	</div>
+	<hr/>
+	<button type="button" onclick="on()"> Turn On </button>
+	<button type="button" onclick="off()"> Turn Off </button>
+	
+	<script type="text/javascript">
+		var div = document.getElementById("light");
+		var a = document.getElementsByClassName("off")[0];
+		var b = document.getElementsByClassName("on")[0];
+
+		function off() {
+			b.style = "opacity: none;";
+			a.style = "display: block; top: 50px; left: 500px;";
+		}
+		function on() {
+			a.style = "opacity: none;";
+			b.style = "display: block; top: 50px; left: 500px;";
+		}
+	</script>
+	
+</body>
+</html>

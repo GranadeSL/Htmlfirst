@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Button</title>
+</head>
+<body>
+	<form>
+	<input type="color" name="color" id="color">
+	<button onclick="a()" type="button">Set</button>
+	</form>
+	
+	<script type="text/javascript">
+		function a(){
+		var a = document.getElementById("color").value;
+		console.log(a);
+		var body = document.getElementsByTagName("body")[0];
+		body.style = "background-color: "+a+"; "
+		console.log (body.style);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>For</title>
+</head>
+<body>
+	<script>
+		Loop1:
+		for ( i = 0; i <= 10; i++) {
+			Loop2:
+			for ( j = 0; j <= 5; j++) {
+				if ( j == 3 ) {
+					break Loop1;
+				}
+				console.log(i + j);
+			}
+		}
+	</script>
+</body>
+</html>

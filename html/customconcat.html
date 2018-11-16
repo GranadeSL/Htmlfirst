@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Concat</title>
+</head>
+<body>
+	<script type="text/javascript">
+ 		var nums = [1, 4, 5, 1, 4, 3, 1, 4, 5, 6];
+	 	console.log(cconcat(nums));
+		function cconcat(array) {
+			var e =[];
+			y=0;
+			for ( i=0; i < array.length; i++ ) {
+
+			if ( e.indexOf(array[i]) == -1 ) {
+				
+				if ( i == array.length - 1) {
+					e[y] = array[i];
+				} else {
+					e[y] = array[i];
+				}
+				y += 1;
+			} 
+		}
+			return e;
+		}
+
+
+	</script>
+</body>
+</html>

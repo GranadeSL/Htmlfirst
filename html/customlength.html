@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Length</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="text" id="text">
+		<button type="button" onclick="check()"></button>
+	</form>
+
+	<script type="text/javascript">
+		function check() {
+			var a = document.getElementById("text").value;
+			var array = a.split('');
+			var length = 0;
+		for ( i=0; array[i] != null; i++) {
+			length += 1;
+		}
+			console.log("The length of the entered text is: " +length);
+		}
+
+	</script>
+
+</body>
+
+</html>

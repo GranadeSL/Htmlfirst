@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Changement</title>
+</head>
+<body>
+		<form>
+		<input id="ab" name="text" type="text" onchange="writes()">
+		</form>
+
+		<hr/>
+		
+		<p id="abc"></p>
+
+
+
+	<script>
+		function writes() {
+		var a = document.getElementById("ab").value;
+		var b = document.getElementById("abc");
+		b.innerHTML = a;
+		}
+	</script>
+</body>
+</html>

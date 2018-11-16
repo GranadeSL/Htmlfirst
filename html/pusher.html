@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pusher</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="text" id="text">
+		<button type="button" onclick="pusher()" id="button">Push!</button>
+		<button type="button" onclick="spell()" id="button1">Spell!</button>
+	</form>
+
+	<script type="text/javascript">
+			var array = [ 1];
+			array.shift();
+			var z = 0;
+			function pusher() {
+				var a = document.getElementById("text").value;
+				array[z] = a;
+				z +=1;
+
+				var b = document.getElementById("text");
+				b.value =  ""
+			}
+
+			function spell() {
+				for ( i=0; i<array.length; i++) {
+				console.log(array[i]); }
+			}
+	</script>
+</body>
+</html>

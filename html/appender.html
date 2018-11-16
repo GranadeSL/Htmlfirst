@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Appender</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="text" id="text">
+		<button type="button" id="button" onclick="appends()"> Enter </button>
+		<button type="button" id="button2" onclick="spell()"> Show array </button>
+
+	</form>
+
+	<script type="text/javascript">
+		var array = [ 1 ];
+		array.shift();
+		
+		function appends() {
+			var a = document.getElementById("text");
+			array.push(a.value);
+			a.value =  "";
+		}
+
+		function spell() {
+		for ( i=0; i<array.length; i++) {
+		console.log(array[i]); }
+	}
+	</script>
+</body>
+</html>

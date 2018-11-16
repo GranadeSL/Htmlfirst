@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photos</title>
+	<link rel="stylesheet" type="text/css" href="../css/default.css">
+	<style> 
+	img {
+		position: relative;
+		float: left;
+		width: 10%;
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li> <img src="../images/rdr2.jpg" alt="rdr2" onclick="bigImg(this)" ondblclick="smallImg(this)" class="_1"> </li>
+		<li> <img src="../images/rdr3.jpg" alt="rdr3" onclick="bigImg(this)" ondblclick="smallImg(this)" class="_2"> </li>
+		<li> <img src="../images/rdr4.jpg" alt="rdr4" onclick="bigImg(this)" ondblclick="smallImg(this)" class="_3"> </li>
+		<li> <img src="../images/fall.jpg" alt="fallout" onclick="bigImg(this)" ondblclick="smallImg(this)" class="_4"> </li>
+	</ul>
+
+	<script type="text/javascript">
+		var body = document.getElementsByTagName("body")[0];
+
+		var img1 = document.getElementsByClassName("_1")[0];
+		var img2 = document.getElementsByClassName("_2")[0];
+		var img3 = document.getElementsByClassName("_3")[0];
+		var img4 = document.getElementsByClassName("_4")[0];
+
+		function bigImg(image) {
+
+			var img = document.getElementsByTagName("img");
+			img1.style = "visibility: hidden;";
+			img2.style = "visibility: hidden;";
+			img3.style = "visibility: hidden;";
+			img4.style = "visibility: hidden;";
+			image.style = "position: absolute; width: 50%; visibility: visible; left: 50%; top: 50%;transform: translate(-50%, -50%); ";
+			body.style = "background-color: black;";
+
+		}
+
+		function smallImg(image) {
+			image.style.width = "10%";
+			img1.style = "visibility: visible;";
+			img2.style = "visibility: visible;";
+			img3.style = "visibility: visible;";
+			img4.style = "visibility: visible;";
+			body.style = "background-color: white;";
+		}
+	</script>
+</body>
+</html>

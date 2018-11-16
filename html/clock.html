@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clock</title>
+	<link rel="stylesheet" type="text/css" href="../css/clock.css">
+</head>
+<body onload="time()">
+	<div id="clock">
+		
+		<span class="h"> </span>
+		<span class="dots">:</span>
+		<span class="m"> </span>
+		<span class="dots">:</span>
+		<span class="s"></span>
+
+	</div>
+
+	<script type="text/javascript">
+		setInterval(time, 1000);
+
+		function time() {
+			var time = new Date();
+			h = time.getHours();
+			m = time.getMinutes();
+			s = time.getSeconds();
+
+			var text = document.getElementById("clock");
+			var hour = document.getElementsByClassName("h")[0];
+			var minute = document.getElementsByClassName("m")[0];
+			var second = document.getElementsByClassName("s")[0];
+
+			hour.innerHTML = +h;
+			minute.innerHTML = +m;
+			second.innerHTML = +s;
+
+		}
+	</script>
+</body>
+</html>

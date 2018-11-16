@@ -1,0 +1,14 @@
+img {
+	width: 100px;
+}
+
+.off, .on {
+	display: none;
+	position: absolute;
+}
+
+div {
+	width: 100px;
+	height: 200px;
+	margin: 50px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Searcher</title>
+</head>
+<body>
+	<form>
+	<input type="text" id="name" name="name">
+	<button type="button" onclick="ad()"></button> 
+	</form>
+	<script type="text/javascript">
+		function ad() {
+
+		var name = document.getElementById("name");
+		var a = name.value;
+		console.log(a);
+		var datalist = [ "Ismail", "Turkan", "Raul", "Rasul"];
+
+
+		for ( i=0; i < datalist.length; i++ ){
+			if ( a == datalist[i] ) {
+				console.log(i);
+				break;
+			} 
+
+		}
+			if ( a == "") {
+				console.log("enter your name");
+			} 
+				else if ( i == datalist.length) {
+				console.log ("not found")
+			}
+		}
+	</script>
+</body>
+</html>

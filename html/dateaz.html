@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date</title>
+</head>
+<body>
+	<h1 id="time"> </h1>
+	<select id="date"></select>
+	<select id="month"></select>
+	<select id="year"></select>
+	<script type="text/javascript">
+
+		var month = ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'Iyun', 'Iyul', 'Avgust', 'Sentyabr', 'Oktyabr', 'Noyabr', 'Dekabr'];
+		var day = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+		var time = new Date();
+			y = time.getFullYear();
+			m = time.getMonth();
+			d = time.getDay();
+			dd = time.getDate();
+		var h1 = document.getElementById("time");
+
+		var yy = document.getElementById('year');
+		var mm = document.getElementById('month');
+		var ddd = document.getElementById('date');
+
+			for (var i = 1950; i<=y; i++){
+			    var opt = document.createElement('option');
+			    if ( i == y) {
+			    	opt.setAttribute('selected', 'selected');
+			    } 
+			    opt.value = i;
+			    opt.innerHTML = i;
+			    yy.appendChild(opt);
+			}
+			for (var i = 0; i<month.length; i++){
+				var optm = document.createElement('option');
+				if ( i == m) {
+			    	optm.setAttribute('selected', 'selected');
+			    } 
+			    optm.value = month[i];
+			    optm.innerHTML = month[i];
+			    mm.appendChild(optm);
+			}
+			for (var i = 0; i < day.length; i++){
+				var optd = document.createElement('option');
+			    if ( i == d - 1) {
+			    	optd.setAttribute('selected', 'selected');
+			    } 
+			    optd.value = day[i];
+			    optd.innerHTML = day[i];
+			    ddd.appendChild(optd);
+			}
+
+					for (i=0; i < month.length; i++) {
+						if ( m == i) {
+							m = month[i];
+							break;
+						}
+					}
+
+					for (i=0; i < day.length ; i++) {
+						if ( d-1 == i) {
+							d = day[i];
+							break;
+						}
+					}
+
+
+
+		h1.innerHTML = 'This is ' + d + ', ' + dd + ' ' + m + ' ' + y;
+
+	</script>
+</body>
+</html>

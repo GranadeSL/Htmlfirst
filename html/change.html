@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change</title>
+	<style>
+	.a {
+			}
+
+	</style>
+</head>
+<body>
+	<div class="a" >
+		<img src="../images/fall.jpg" alt="first" onmouseenter="imga()" onmouseleave="imgb()"> 
+	</div>
+
+	<script type="text/javascript">
+		function imga() {
+			var src = document.getElementsByTagName("img")[0];
+			src.src = "../images/FOS.jpg";
+		}
+
+		function imgb() {
+			var src = document.getElementsByTagName("img")[0];
+			src.src = "../images/fallout3.jpeg";
+		}
+	</script>
+</body>
+</html>

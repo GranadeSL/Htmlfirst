@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java</title>
+	<link rel="stylesheet" type="text/css" href="../css/java.css">
+</head>
+<body>
+	<p id="p" style="color: yellow; background-color: black"> Hiza </p>
+
+	<h1><span onload="getHour()"> </span><span class="a">:</span><span onload="getMinute()"></span><span class="a">:</span><span onload="getSecond()"></span> </h1>
+	<script >
+		/* 		var a = Math.random() * 1000;
+		var b = Math.random() * 1000;
+		var c = Math.random() * 1000;
+		a = parseInt(a);
+		b = parseInt(b);
+		c = parseInt(c);
+		console.log(+a);
+		console.log(+b);
+		console.log(+c);
+		body = document.getElementsByTagName("body")[0];
+		body.style = "background-color: rgb("+a+","+b+","+c+")"; */
+	/*Doesn't work always because rgb takes values on the interval from 0 to 255 */
+		p = document.getElementById("p").getAttribute("style");
+		style = document.getElementById("p");
+		p += "; background-color: red;"
+		style.style = p;
+/* --------------------------------------------- */
+		var a = Math.random() * 10;
+		a = parseInt(a);
+
+		body = document.getElementsByTagName("body")[0];
+		body.style = "background-image: url(../css/images/"+a+".jpg) ; background-size: cover; background-repeat: no-repeat;"; 
+/* ------------------------------------------------ */
+
+var time = new Date();
+function getHour() {
+	hour = time.getHours();
+	text1 = document.getElementsByTagName("span")[0];
+	text1.innerHTML += +hour; 
+}
+function getMinute() {
+	minute = time.getMinutes();
+	text2 = document.getElementsByTagName("span")[2];
+	text2.innerHTML += +minute; 
+}
+function getSecond() {
+	second = time. getSeconds();
+	text3 = document.getElementsByTagName("span")[4];
+	text3.innerHTML += +second; 
+}
+	</script>
+</body>
+</html>
