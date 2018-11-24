@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selector</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<div id="select_box">
+	<form>
+		<label>
+		<input type="checkbox" value="turkan" id="turkan" class="showChecked">Turkan Nabiyeva
+		</label>
+		<label>
+		<input type="checkbox" value="raul" id="raul" class="showChecked">Raul Manafov
+		</label>
+		<label>
+		<input type="checkbox" value="leyla" id="leyla" class="showChecked">Leyla Safarli
+		</label>
+		<label>
+		<input type="checkbox" value="rasul" id="rasul" class="showChecked">Rasul Manafov
+		</label>
+		<label>
+		<input type="checkbox" value="ismail" id="ismail" class="showChecked">Ismail Safarli
+		</label>
+
+
+	</form>
+	</div>
+	<p id="text"></p>
+	<script>
+	var infos = [
+	{ 
+	   "name":"Turkan",
+	   "surname":"Nabiyeva",
+	    "age":20,
+	    "email": "arasdsd@fasda"
+	},	
+	{
+		"name":"Raul",
+	    "surname":"Manafov",
+	    "age":4,
+	    "email": "adassda@das"
+	} ,
+	{ 
+		"name":"Rasul",
+	    "surname":"Manafov",
+	    "age":2,
+	    "email": "wewewwewe@fasda"
+	} ,
+	{
+		"name":"Ismail",
+	    "surname":"Safarli",
+	    "age":20,
+	    "email": "wsdad1e11we@fasda"
+	},
+	{
+		"name":"Leyla",
+	    "surname":"Safali",
+	    "age":17,
+	    "email": "daw222ewe@fasda" }
+	] ;
+	
+
+$(document).ready(function(){
+	$('.showChecked').click(function(){
+	var parent_div=document.getElementById('text');
+		$('#text').text('');
+		$(':checked').each(function(index, elem){
+			for (i=0;i<infos.length; i++) {
+				if (infos[i].name.toLowerCase() == elem.value) {
+					// var new_div=document.createElement('div');
+					// new_div.setAttribute('id', 'child_'+i);
+					// parent_div.appendChild(new_div);
+					// var text = document.createTextNode(infos[i].name+" "+infos[i].surname+","+infos[i].age+","+infos[i].email);
+					// new_div.appendChild(text);
+
+					$('#text').append(infos[i].name+" "+infos[i].surname+","+infos[i].age+","+infos[i].email+'\n');
+
+	}
+	}
+ });
+});
+
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FadeIn</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+	<style>
+	div {
+		border: 1px black solid;
+		height: 100px;
+		width: 100px;
+	}
+	.fadein {
+		animation-name: fadein;
+		animation-duration: 5s;
+		animation-direction: forwards;
+	}
+	.fadeout {
+		animation-name: fadeout;
+		animation-duration: 5s;
+		animation-direction: forwards;
+	}
+
+	@keyframes fadein {
+    from {
+
+    	opacity: 0;
+
+    }
+    to {
+    	opacity: 1;
+    }
+	}
+	@keyframes fadeout {
+    from {
+
+    	opacity: 1;
+
+    }
+    to {
+    	opacity: 0;
+    }
+	}
+	</style>
+</head>
+<body>
+	<div id="first"> </div>
+	<button id="starter"> Toggle </button>
+	<script>
+		$(document).ready(function(){
+			
+			$('#starter').click(function() {
+				$('#first').addClass('fadein');
+			});
+
+			});
+	</script>
+</body>
+</html>

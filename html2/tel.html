@@ -2,9 +2,71 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Telephone: </title>
+	<title>Telephone</title>
 </head>
 <body>
-	
+	<table id="tb">
+		<tr id="tr">
+			<td id="tel">Tel1</td>
+			<td id="number"><input type="text" name="number" id="numer"></td>
+			<td id="sign"><button class="btn_" onclick="add()">+</button></td>
+		</tr>
+	</table>
+
+	<script>
+		var table = document.getElementById("tb");
+		var tr = document.getElementById("tr");
+		var td = document.getElementById("sign");
+
+		var tel = document.getElementById("tel");
+		var number = document.getElementById("numer");
+	    var btn = document.getElementsByClassName("btn_");
+
+
+
+		var v = 2;
+		var t = 1;
+		
+		function deleter() {
+			
+		}
+
+		function add() {
+			var plus = document.createTextNode('+');
+			var minus = document.createTextNode('-');
+
+			var new_tr = document.createElement('tr');
+			var new_td1 = document.createElement('td');
+			var new_td2 = document.createElement('td');
+			var new_td3 = document.createElement('td');
+
+			table.appendChild(new_tr);
+			new_tr.appendChild(new_td1);
+			new_tr.appendChild(new_td2);
+			new_tr.appendChild(new_td3);
+
+			var text = document.createTextNode('Tel'  +v);
+			new_td1.appendChild(text);
+			var input = document.createElement('input');
+			input.setAttribute('type', 'text');
+			var button = document.createElement('button');
+			button.setAttribute('onclick', 'add()');
+			button.setAttribute('class', 'btn_')
+			button.appendChild(plus);
+
+		var prebutton = document.getElementsByClassName('btn_')[t-1];
+			prebutton.innerHTML ='';
+			prebutton.appendChild(minus);
+			prebutton.setAttribute('onclick', 'deleter()');
+
+			new_td2.appendChild(input);
+			new_td3.appendChild(button);
+
+			v+= 1;
+			t+=1;
+			}
+		
+
+	</script>
 </body>
 </html>

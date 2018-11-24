@@ -1,0 +1,27 @@
+.first { 
+	width: 500px;
+	height: 200px;
+	border: 5px solid blue;
+	transition: all 1s;
+	position: relative;
+	float: left;
+	color: transparent;
+	text-align: left;
+	 }
+
+.second { 
+	width: 700px;
+	height: 100px;
+	color: black;
+	text-align: center;
+
+}
+
+.third {
+	border: 7px solid red;
+
+}
+.btn {
+	position: relative;
+	float: left;
+}

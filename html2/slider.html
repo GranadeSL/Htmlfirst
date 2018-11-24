@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+</head>
+<body>
+	<img src="">
+	<script>
+		var a = ["_1.png", "_2.png", "_3.png", "_4.jpg", "_5.jpeg", "_6.JPG"];
+		var img = document.getElementsByTagName('img')[0];
+		var v = 0;
+
+		setInterval(function(){
+				if (v >= a.length) {
+					v=0;
+				img.src="../images/"+a[v]+"";
+						v+=1;
+				}else {
+				img.src="../images/"+a[v]+"";
+						v+=1;
+					}
+		}, 3000);
+
+	</script>
+</body>
+</html>

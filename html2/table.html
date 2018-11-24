@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table</title>
+		<script src="../js/jquery-3.3.1.js"></script>
+	<style>
+	table {
+		width: 50%;
+	}
+	</style>
+</head>
+<body>
+	<button class='tabler'>Create Table</button>
+	<script>
+		var body = document.getElementsByTagName('body')[0];
+
+		var infos = [
+	{ 
+	   "name":"Turkan",
+	   "surname":"Nabiyeva",
+	    "age":20,
+	    "email": "arasdsd@fasda"
+	},	
+	{
+		"name":"Raul",
+	    "surname":"Manafov",
+	    "age":4,
+	    "email": "adassda@das"
+	} ,
+	{ 
+		"name":"Rasul",
+	    "surname":"Manafov",
+	    "age":2,
+	    "email": "wewewwewe@fasda"
+	} ,
+	{
+		"name":"Ismail",
+	    "surname":"Safarli",
+	    "age":20,
+	    "email": "wsdad1e11we@fasda"
+	},
+	{
+		"name":"Leyla",
+	    "surname":"Safali",
+	    "age":17,
+	    "email": "daw222ewe@fasda" }
+	] ; 
+
+		var table = document.createElement('table');
+		var tr = document.createElement('tr');
+		var thead = document.createElement('thead');
+		var th1 = document.createElement('th');
+		var th2 = document.createElement('th');
+		var th3 = document.createElement('th');
+		var th4 = document.createElement('th');
+		body.appendChild(table);
+		table.appendChild(thead);
+		thead.appendChild(tr);
+		tr.appendChild(th1);
+		tr.appendChild(th2);
+		tr.appendChild(th3);
+		tr.appendChild(th4);
+		var names = document.createTextNode('Name');
+		var surname = document.createTextNode('Surname');
+		var age = document.createTextNode('Age');
+		var email = document.createTextNode('Email');
+		th1.appendChild(names);
+		th2.appendChild(surname);
+		th3.appendChild(age);
+		th4.appendChild(email);
+		var tbody = document.createElement('tbody');
+
+
+		$(document).ready(function(){
+			$('tabler').click(function() {
+				for (i=0; i<infos.length; i++) {
+					var tr = document.createElement('tr');
+					tbody.appendChild(tr);
+					for (j=0; j<infos[0].length;j++) {
+						var td = document.createElement('td');
+						tr.appendChild(td);
+
+					}
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

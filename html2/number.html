@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Number</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+	<style>
+	.error {
+		border: 1px red solid;
+	}
+	</style>
+</head>
+<body>
+	<form>
+	<input type="number" id="num">
+	</form>
+	<script>
+	$(document).ready(function(){
+		var num = $('#num');
+		num.change(function() {
+	if ( parseFloat(num.text()) >= 60 && parseInt(num.text()) <=0 ) {
+		num.addClass(error);
+	};
+		});
+	
+	});
+		
+	</script>
+</body>
+</html>

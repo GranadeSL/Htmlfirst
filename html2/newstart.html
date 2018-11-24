@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tryout</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="../css/newstart.css"></link>
+</head>
+<body>
+	<div class="first"></div>
+	<button class="btn">Toggle</button>
+	<script>
+		$(document).ready(function(){
+			$('.btn').click(function(){
+				$('.first').toggleClass('second third');
+				$('.first').text("brain dead");
+
+			});
+		});
+	</script>
+</body>
+</html>

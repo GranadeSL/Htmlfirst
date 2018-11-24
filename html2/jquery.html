@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+	<style> 
+	@keyframes toogler {
+    from {
+
+    	height: 0px;
+
+    }
+    to {
+    	display: block;
+		height: 20px;
+
+		
+    }
+}
+	@keyframes tooglerup {
+ 	from {
+ 		height: 20px;
+ 	}
+
+ 	to {
+ 		height: 0px;
+
+ 	}
+    }
+	.a1, .a2, .a3, .a4 {
+		display: none;
+		text-align: center;
+		width: 300px;
+		border: 1px black solid;
+		box-sizing: border-box;
+			}
+	.q1, .q2, .q3, .q4 { 
+		background-color: #4298f4;
+		color: white;
+		text-align: center;
+		border: 5px #4298f4 solid;
+		border-radius: 20px;
+		box-sizing: border-box;
+		width: 300px;
+	}
+	</style>
+</head>
+<body>
+	<p class="q1"> IAMBEGINNINGTOFEELLIKEIAM</p>
+	<p class="a1"> RAPGODRAPGOD </p>
+	<p class="q2"> ALLMYPEOPLEFROMFRONT</p>
+	<p class="a2"> TOTHEBACKNOD </p>
+	<p class="q3"> UUUH SAMAA LAMMAA DUDA LAMAA</p>
+	<p class="a3"> YOUREASSUMINGIAMAHUMAN </p>	
+	<p class="q4"> Salam</p>
+	<p class="a4"> Aleykumzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzza </p>
+
+	<script>
+		var v=0;
+		function customtoggle() {
+	document.getElementsByClassName("a4")[0].style = "display: block; animation-name: toogler; animation-duration: 1s; animation-fill-mode: forwards; overflow: hidden;"
+		v=1;
+} 
+
+		function customtoggleup() {
+	document.getElementsByClassName("a4")[0].style = "display: block; animation-name: tooglerup; animation-duration: 1s;animation-fill-mode: forwards; overflow: hidden;";
+		v=0; }
+
+		function customdeleter() {
+		console.log("done");
+		document.getElementsByClassName("a4")[0].style = "display: none;";
+		}
+
+		$(document).ready(function() {
+
+
+			$(".q1").click(function(){
+				$(".a1").slideToggle();
+			});
+			$(".q2").click(function(){
+				$(".a2").slideToggle();
+			});
+			$(".q3").click(function(){
+				$(".a3").slideToggle();
+			});	
+			$(".q4").click(function(){
+				if ( v==0) {
+				customtoggle();
+			} else {
+				customtoggleup();
+				setTimeout(customdeleter, 1000);
+			}
+
+			});	
+		});
+	</script>
+</body>
+</html>
