@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reverser of The Text</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<input type="text" id="forward">
+	<button id="reverser">Reverse!</button>
+	<p>Reverse of your input: <span id="reverse"></span></p>
+	<script>
+		$(document).ready(function(){
+			$("#reverser").click(function() {
+			var a = $('#forward').val();
+			var b = [];
+			b.length = a.length;
+			var v = 0;
+			for (var i=a.length - 1; i>=0; i--){
+				b[v] = a[i];
+				v++;
+			}
+			b = b.join('');
+			$('#reverse').text(b);
+		});
+		});
+	</script>
+</body>
+</html>

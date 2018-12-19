@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<script src="../js/angular.js"> </script>
+</head>
+<body>
+
+	<div ng-app>
+		<input type="number" ng-model="num1">
+		<input type="number" ng-model="num2">
+<p>
+	<span ng-show="num1" ng-bind="num1"></span>
+	<span ng-show="num1 && num2"> + </span>
+	<span ng-show="num2" ng-bind="num2"></span>
+	<span ng-show="num1 && num2"> = </span>
+	<span ng-show="num1 && num2" ng-bind="num1 + num2"></span>
+</p>
+<p>
+	<span ng-show="num1" ng-bind="num1"></span>
+	<span ng-show="num1 && num2"> - </span>
+	<span ng-show="num2" ng-bind="num2"></span>
+	<span ng-show="num1 && num2"> = </span>
+	<span ng-show="num1 && num2" ng-bind="num1 - num2"></span>
+</p>
+<p>
+	<span ng-show="num1" ng-bind="num1"></span>
+	<span ng-show="num1 && num2"> * </span>
+	<span ng-show="num2" ng-bind="num2"></span>
+	<span ng-show="num1 && num2"> = </span>
+	<span ng-show="num1 && num2" ng-bind="num1 * num2"></span>
+</p>
+<p>
+	<span ng-show="num1" ng-bind="num1"></span>
+	<span ng-show="num1 && num2"> / </span>
+	<span ng-show="num2" ng-bind="num2"></span>
+	<span ng-show="num1 && num2"> = </span>
+	<span ng-show="num1 && num2" ng-bind="num1 / num2"></span>
+</p>
+<p>
+	<span ng-show="num1" ng-bind="num1"></span>
+	<span ng-show="num1 && num2"> % </span>
+	<span ng-show="num2" ng-bind="num2"></span>
+	<span ng-show="num1 && num2"> = </span>
+	<span ng-show="num1 && num2" ng-bind="num1 % num2"></span>
+</p>
+	</div>
+
+
+</body>
+</html>

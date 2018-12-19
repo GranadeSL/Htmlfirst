@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularTry</title>
+	<script src="../js/angular.js"> </script>
+	<style>
+	li {
+		position: relative;
+		float: left;
+		margin: 20px;
+	}
+	</style>
+</head>
+<body>
+
+	<div ng-app="App" ng-controller="Contr" >
+		<ul>
+			<li ng-repeat="key in menus">
+				{{key}}
+				<ul>
+					<li ng-repeat="x in submenus[key]">{{x}} </li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+
+	<script>
+		var app = angular.module('App', []);
+		app.controller("Contr", function ($scope) {
+
+		$scope.menus=[
+			'home', 'about', 'lessons', 'other'
+		]
+		$scope.submenus={
+			'lessons' : ['html', 'css', 'js'],
+			'other' : ['why us'],
+		};
+
+
+	});
+	</script>
+</body>
+</html>

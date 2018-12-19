@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SMTH</title>
+	<script src="../js/angular.js"> </script>
+</head>
+<body ng-app="App" ng-controller="Contr">
+	<input type="text" ng-model="name1"> 
+	<button class="clicker" ng-click="count=count+1" ng-init="0">OK</button>
+	<p ng-bind="name2"> </p>
+
+	<script>
+		var user = [];
+		var app = angular.module('App', []);
+			app.controller("Contr", function ($scope){
+				$scope.name2 = $scope.name1;
+				});
+			app.controller("button", function($scope){
+
+			});
+	</script>
+</body>
+</html>

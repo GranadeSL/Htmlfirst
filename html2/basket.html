@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basket</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+	<style type="text/css">
+		body {
+			display: flex;
+			justify-content: space-around;
+		}
+		img {
+			height: 100px;
+		}
+		* {
+			box-sizing: border-box;
+			list-style: none;
+			text-decoration: none;
+
+		}
+		nav {
+			border: 1px solid black;
+			display: inline;
+			position: relative;
+			float: left;
+
+		}
+		#cleaner {
+			height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="menu">
+		<a href="aliexpress.html"> Aliexpress </a>
+		<a href="basket.html">Basket</a>
+	</nav>
+			<button id="cleaner">Clean!</button>
+		<script>
+		$(document).ready(function(){
+
+	var body = document.getElementsByTagName('body')[0];
+	var bodyw=document.getElementsByTagName('body')[0].offsetWidth;
+		
+for (v=1; isNaN(localStorage.getItem( 'prod' + v)); v++){
+		var div = document.createElement('div');
+		var image = document.createElement('img');
+		var remover = document.createElement('button');
+		var text = document.createTextNode('-');
+					remover.appendChild(text);
+					body.appendChild(div);
+					div.appendChild(image);
+					div.appendChild(remover);
+	image.setAttribute('src', localStorage.getItem( 'prod' + v));
+					image.setAttribute('id', 'prod'+v+'');
+
+				}
+
+				$('div button').addClass('remover');
+				$('div').addClass('toberemoved');
+
+				$('.remover').click(function(){
+					$(this).parent().remove();
+					localStorage.removeItem($(this).parent().children('img').attr('id'));
+				});
+				
+				$('#cleaner').click(function(){
+					window.localStorage.clear();
+					$('.toberemoved').remove();
+				});
+			});
+
+	</script>
+
+</body>
+</html>

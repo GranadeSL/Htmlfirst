@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aliexpress</title>
+	<script src="../js/jquery-3.3.1.js"></script>
+</head>
+	<style>
+		* {
+			box-sizing: border-box;
+			list-style: none;
+			text-decoration: none;
+			border: none;
+		}
+		nav {
+			border: 1px solid black;
+			display: flex;
+			justify-content: space-evenly;
+		}
+	</style>
+<body>
+	<nav class="menu">
+		<a href="aliexpress.html"> Aliexpress </a>
+		<a href="basket.html">Basket</a>
+	</nav>
+
+	<div class="product">
+	<img src="images/ps4.jpg" alt="prod" height="100px" class="prod">
+	<img src="images/basket.png" width="52px" class="add" class="prod">
+	</div>
+	<div class="product">
+	<img src="images/rdr2.jpg" alt="prod" height="100px" class="prod">
+	<img src="images/basket.png" width="52px" class="add">
+	</div>
+	<div class="product">
+	<img src="images/usb.jpg" alt="prod" height="100px" class="prod">
+	<img src="images/basket.png" width="52px" class="add">
+	</div>
+
+	<script type="text/javascript">
+		var v = 1;
+		$(document).ready(function(){
+			$('.add').click( function() {
+				var parent = $(this).parent();
+				var child = parent.children('.prod');
+				var source = child.attr('src');
+				var number = 'prod' + String(v);
+				localStorage.setItem( number, source);
+				v++;
+			});
+			});
+
+	</script>
+</body>
+</html>

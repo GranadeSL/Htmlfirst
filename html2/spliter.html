@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Spliter</title>
+	<script src="../js/angular.js"> </script>
+	<script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body ng-app="MyApp" ng-controller="MyContr">
+	
+	<p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum et aspernatur voluptas quis neque eius laboriosam nihil quasi, quidem sapiente ipsa modi voluptatem molestias rem aut, dicta numquam, ipsum ex?
+	</p>
+	Input the number of words: <input type="number" ng-model="num">
+	<button ng-click="clickfunc()">CLICK!</button>
+	<p id="newtext">{{newest}}</p>
+
+	<script>
+	var text = document.getElementById('text').innerHTML;
+	var a=[];
+	var app=angular.module("MyApp", []);
+	app.controller("MyContr", function ($scope) {
+
+
+		  $scope.clickfunc = function(  ) {
+		  	var b="";
+		  			a = text.split(' ');
+		  			for ( i=0; i< $scope.num; i++) {
+		  				b+= a[i] + " ";		  			}
+		  			$scope.newest = b;
+
+		 };
+		       });
+
+
+
+
+</script>
+</body>
+</html>
